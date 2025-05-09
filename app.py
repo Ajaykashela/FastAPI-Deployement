@@ -5,8 +5,8 @@ from transformers import pipeline
 app = FastAPI()
 
 classifier = pipeline(
-    "fill-mask",  # distilbert-base-uncased is a masked language model
-    model="distilbert-base-uncased"
+    "text-classification",
+    model="nlptown/bert-base-multilingual-uncased-sentiment"
 )
 
 class InputText(BaseModel):
