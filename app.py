@@ -4,7 +4,7 @@ from transformers import pipeline
 
 app = FastAPI()
 
-classifier = pipeline("text-classification", model="ajaykashela/distilbert_email_classifier_v2")
+classifier = pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
 
 class InputText(BaseModel):
     text: str
