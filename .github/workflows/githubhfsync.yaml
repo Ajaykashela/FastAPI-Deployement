@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://ajaykashela:$HF_TOKEN@huggingface.co/spaces/ajaykashela/FAST_API_HF_TRIAL main
+        run: git push -f https://ajaykashela:$HF_TOKEN@huggingface.co/spaces/ajaykashela/FAST_API_HF_TRIAL main
