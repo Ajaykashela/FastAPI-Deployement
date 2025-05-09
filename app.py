@@ -4,7 +4,11 @@ from transformers import pipeline
 
 app = FastAPI()
 
-classifier = pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
+classifier = pipeline(
+    "text-classification",
+    model="distilbert-base-uncased-finetuned-sst-2-english",
+    from_tf=True
+)
 
 class InputText(BaseModel):
     text: str
